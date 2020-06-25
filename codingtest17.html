@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="ddd" value="클릭하시오">
+    <input type="number" id="aaa" />
+    <div id="ccc">yes or no</div>
+    <script>
+        /*유주는 놀이공원 아르바이트 중입니다. 그런데 놀이기구마다 키 제한이 있습니다.
+        유주가 담당하는 놀이기구는 키가 150cm 이상만 탈 수 있습니다.
+        입력으로 키가 주어지면
+        키가 150이 넘으면 yes를 틀리면 no를 출력하는 프로그램을 작성하세요.*/
+    var 클릭 = document.getElementById("ddd");
+    var 입력 = document.getElementById("aaa");
+    var 결과창 = document.getElementById("ccc");
+    클릭.addEventListener('click',function asd(){
+        if(입력.value > 150){
+            결과창.textContent = "yes";
+        }else{
+            결과창.textContent = "no";
+        }
+        var a = 결과창
+        console.log(a);
+
+    });
+  
+      
+    </script>
+    
+</body>
+</html>
