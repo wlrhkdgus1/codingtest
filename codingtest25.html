@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="aaa" value="입력">
+    <input type="number" id="bbb">
+    <script>
+    /* 원의 넓이를 구하시오.
+    원의 넓이는 반지름길이x반지름길이x3.14로 구할수 있습니다.
+    함수를 사용하여 원의 넓이를 구하는 코드를 작성해봅시다.
+    입력으로 반지름의 길이 정수n이 주어지면 원의 넓이를 반환하는 함수를 만들어주세요. */
+    var 클릭 = document.getElementById("aaa");
+    var c = document.getElementById("bbb");
+    function b() {
+            let pi = 3.14;
+            return c.value * c.value * pi;
+        }
+    function a(){
+        console.log(b())
+    }
+    클릭.addEventListener("click", a);
+    </script>
+    
+</body>
+</html>
