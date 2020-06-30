@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="aaa" value="번역기">
+    <input type="text" id="bbb">
+    <script>    
+    /*우리 태양계를 이루는 행성은 수성,금성,지구,화성,목성,토성,천왕성,해왕성이 있습니다.
+    이 행성들의 영어이름은 Mercury,Venus ,Earth, Mars, Jupiter, Saturn, Uranus, Neptune 입니다
+    행성의 한글 이름을 입력하면 영어 이름을 반환하는 프로그램을 만들어주세요.*/
+    var 클릭 = document.getElementById("aaa");
+       var 입력 = document.getElementById("bbb");
+    클릭.addEventListener("click",function(){
+        var a = 입력.value;
+             switch(a){
+            case "수성":
+                a="Mercury";
+                console.log(a);
+                break;
+            case "금성":
+                a = "Venus";
+                console.log(a);
+                break;
+            case "지구":
+                a = "Earth";
+                console.log(a);
+                break;
+            case "화성":
+                a = "Mars";
+                console.log(a);
+                break;
+            case "목성":
+                a = "Jupiter";
+                console.log(a);
+                break;
+            case "토성":
+                a = "Saturn";
+                console.log(a);
+                break;
+            case "천왕성":
+                a = "Uranus";
+                console.log(a);
+                break;
+            case "해왕성":
+                a = "Neptune";
+                console.log(a);
+                break;
+            default:
+            console.log("잘못 입력하셧습니다.");    
+            }
+        });
+
+    </script>
+    
+</body>
+</html>
