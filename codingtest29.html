@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="aaa" value="입력">
+    <input type="text" id="bbb">
+    <script>
+        /*
+        진구는 영어 학원 아르바이트를 하고있습니다. 반 아이들은 
+        알파벳을 공부하는 학생들인데 오늘은 대문자 쓰기 시험을 봤습니다.
+        알파벳 하나만을 입력하고 그 알파벳이 대문자이면 yes 아니면 no를 출력하는
+        프로그램을 만들어 주세요.*/
+        var 클릭 = document.getElementById("aaa");
+       var 입력 = document.getElementById("bbb");
+    클릭.addEventListener("click",function(){
+        var a = 입력.value;
+        var b = a.toUpperCase();
+        var c = a.toLowerCase();
+        if(b){
+            console.log("Yes");
+            console.log(b);
+        }else{
+            console.log("No");
+            console.log(c);
+        }
+    });
+     
+
+        /*const data = propmt("알파벳을 입력하세요.");
+        if(data === data.toUpperCase()){
+            console.log("Yes");
+        }else{
+            consol.log("No");
+        }*/
+        
+        </script>
+    
+</body>
+</html>
