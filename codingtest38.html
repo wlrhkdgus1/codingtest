@@ -15,24 +15,35 @@
         사탕을 사기로 한다.
         학생들의 점수를 공백으로 구분하여 입력을 받고 사탕을 받을 학생의 수를 출력하세요.*/
 
-        힌트1 : map, sort, pop, includes, push
+       // 힌트1 : map, sort, pop, includes, push
 
-        const scores = prompt('점수입력').split(' ').map(function(n){
-         return parseInt(n, 10);
+      //  힌트2 (다른 방식으로 풀어도 됩니다.)
+
+        const scores = prompt('점수입력').split(' ').map(function(n){  // prompt와 split(' ') 띄어쓰기로인해 값들을 입력받고 배열로만들어 맵에서 반복되면서 parseInt를 수행한다
+         return parseInt(n, 10);}); // n을 10진수로 바꾸어 number로 출력한다.
+
+        scores.sort((a, b) => { //sort를 이용해 숫자를 정렬시키고 a-b를 통해 낮은수~높은수로 정렬시킨다
+         return a-b;            // sort 만 이용시 1 111 112 113 2 3 4 이런식으로 출력됨. 아스키코드 우선순위.
         });
 
-        scores.sort((a, b) => {
-         return a-b;
-        });
+        console.log(scores)
 
-        let count = 0;
+        let count = 0; 
         let arr = [];
 
-        while (arr.length < 3) {
-         // 여기를 채워 넣으세요.
+      while (arr.length < 3) {  // arr의 배열이 while문을 통해 0~2까지 총 3번 돈다.
+        let n = scores.pop(); // score에 pop을통해 맨뒤에서부터 뽑아온다. 그걸n에다가 저장.
+        if (!arr.includes(n)){ //arr.includes(n) includes = 포함되어있는지 확인해주는함수 배열에 n값이 있나?!
+        // !를 통해 n의 값이 arr에 포함되어 있지 않다면 실행한다. 10 20 30 40 50 50 50 이면
+        // 50이 한번 pop을통해 n에 저장되고. 다음 if문에서 50 이 포함되어 있기때문에 카운트숫자만 올라간다.
+        // 50[1] + 1 + 1 + 40[1] + 30[1] = 6
+          arr.push(n);
         }
+        count += 1;
+    }
 
-        console.log(count);
+        console.log(count); // = 6
+
 
     </script>
     
