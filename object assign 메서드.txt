@@ -1,0 +1,42 @@
+//object assign 메서드. 카피해서 새로운객체를 사용할때 좋음.
+
+const healthObj = {
+   showHealth : function(){
+     console.log("오늘 운동시간 : " + this.healthTime);
+}
+}
+
+const myHealth = Object.assign(Object.create(healthObj), {
+     name : "crong",
+     lastTime : "11:20"
+});
+console.log(" mthealth is " ,myHealth);
+
+========================================
+
+const previousObj = {
+     name : "crong",
+     lastTime : "11:20"
+};
+
+const myHealth = Object.assign({}, previousObj, {
+     "lastTime" : "12:30",
+     "name" : "honux",
+     "age" : 99;
+});
+
+console.log("myhealth is",myHealth);
+
+안에있는 "lastTime" : "12:30", 내용이 나옴 하지만 name이나 lastTime이 비어있으면
+     	"name" : "honux",
+    	 "age" : 99;
+previousObj 에있는 값을 대체해서 가져옴.
+없을경우 가져오고 내가변환할경우 내가쓴값이 나온다.
+기존객체를 이용할수있으며 새로운객체를 만들기 좋음.
+
+
+
+
+
+
+
