@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //slice
+       console.log([1,2,3,4,5,6].slice(0, 3)); // [1,2,3]
+      //concat
+       console.log([1,2,3,4,5,6].concat([7,8,9])); // 배열이아닌 (7,8,9)도 동일함 [1,2,3,4,5,6,7,8,9]
+       console.log([1,2,3,4,5,6].concat(typeof window)); // [1,2,3,4,5,6,object]
+       console.log([1,2,3,4,5,6].concat({ name : "amarans"})); // [1,2,3,4,5,6,{name : "amarans"}]
+      //map
+      console.log([1,2,3,4,5,6].map(x => x*2)); // [2,4,6,8,10,12]
+      //filter
+      console.log([1,2,3,4,5,6].filter(x => x%2 === 0)); // 2로나눠서 0이되는 값 :[2,4,6] 
+      //reduce *중요
+      console.log([0,1,2,3,4,5,6].reduce((acc, cur) => acc + cur)); // acc = 아규먼트,cur = 쿼런트.
+      // = 답:21  0+1 = 1+2 = 3+3 = 6+4 = 10+5 = 15+6 
+      // 디폴트값을 안정해주면 기본값이 맨앞에 값으로됨. 맨앞의값 0
+      console.log([0,1,2,3,4,5,6].reduce((acc, cur) => acc + cur,10));
+      // default 값을 10으로 주어. 10부터 시작 10+0 = 10+1 = 11+2 이런식으로 작동
+      // 결과값:31
+    </script>
+    
+</body>
