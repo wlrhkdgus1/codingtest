@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // map
+      let numbers = [1,2,3,4,5];
+      let doubledNumbers = [];
+
+      // impelative = mutable(변할수있는) 기존의것을 값을바꿔 새로운값 할당
+
+      let i = 1;
+      i += 1;
+      i;
+
+      //declarative = immutable 기존의 것은 그대로 냅두고 새로운배열 만들어 값을 할당
+      let doubled = numbers.map(function(number){
+        return number * 2
+      });
+      console.log(doubled);
+
+      //  Declative, immutable
+      // create a new array including only height of each image. 
+      // height만 출력
+      let images = [
+        {height : '34px', width: '39px'},
+        {height : '54px', width: '19px'},
+        {height : '83px', width: '75px'}
+      ];
+      
+      let heights = images.map(function(image){
+        return image.height;
+      });
+      console.log(heights);
+
+      // crate a new array including speed of each item: distance/time
+      // speed 는 distance 나누기 time
+      let trips = [
+        { distance: 34, time : 10},
+        { distance: 90, time : 50},
+        { distance: 59, time : 25}
+      ];
+
+      let speeds = trips.map(function(trip){
+        return trip.distance/trip.time;
+      });
+
+      console.log(speeds);
+      
+      // =====================================================================================
+
+
+      //Implement a 'pluck' function,
+      // pluck 연습.
+      let heroes = [{name:'spuerman'},{name:'batman'},{name:'x-man'}];
+     
+
+      function pluck(array, property){
+        return array.map(function(hero){
+          return hero.name;
+        })
+      }
+      console.log(pluck(heroes, 'name')); // return ['superan', 'batman' , 'x-man'];);
+
+    </script>
+    
+</body>
