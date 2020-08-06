@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     // const
+     // const age = 15;
+     // number , string = 바뀔수없음. 그러나 object , array , list 는바뀔수있음
+     // 하지만 주소는 바뀌지않음.
+     // age = 25; console.log(age); = 에러가뜸 const는 변하지않는수
+     // 하지만 배열에 들어가게되면 말이달라짐.
+     const age = [15, 20, 25];
+     age.push(30)
+     console.log('age ',age); // 답 [15, 20, 25, 30]
+
+     const obj = {
+        key: 'Amarans',
+        occupation: 'coder'
+     }
+      obj.key = 'Superman';
+
+      console.log(obj); // 답 key : "Superman", occupation : 'code'
+
+     //=============================================================
+     // function 3가지다 같은방법입니다.
+
+     function add1(a,b){
+       return a+b
+     }
+     console.log(add1(3,5)); // 답 : 8
+    
+
+     const add2 = function(a,b){
+       return a+b
+     }
+     console.log(add2(3,5)); // 답 : 8
+      
+
+     const add3 = (a,b) => {
+       return a+b;
+     };
+     console.log(add3(3,5)); // 답: 8
+
+
+     const add4 = (a,b) => a+b;
+     console.log(add4(3,5)); // 답: 8  
+
+     // ======================================
+     
+    </script>
+    
+</body>

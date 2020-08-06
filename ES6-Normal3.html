@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // filter
+    let heroes = [
+      { id: 1, name: 'Superman', type: 'Flying', feePerMin:100 },
+      { id: 2, name: 'Batman', type: 'Flying', feePerMin:120},
+      { id: 3, name: 'Ironman', type: 'Metal', feePerMin:130},
+      { id: 4, name: 'X-man', type: 'Mutant', feePerMin:140},
+      { id: 5, name: 'Antman', type: 'Insect', feePerMin:150}
+    ];
+    
+    let comments =[
+      { writerId: 1, content: '아름다운 우리나라'},
+      { writerId: 2, content: '아름다운 박쥐 세상'},
+      { writerId: 1, content: '아름다운 크립톤'},
+      { writerId: 3, content: '아름다운 장미 한 송이'},
+      { writerId: 5, content: '아름다운 제주도 밤바다'},
+      { writerId: 4, content: '아름다운 한라산'},
+      { writerId: 4, content: '아름다운 돌담길'},
+      { writerId: 2, content: '아름다운 올레길'}
+    ]
+    // Flying 타입 히어로만 filterHeroes에 담아보자.
+    let filterHeroes = [];
+
+    // Imperative
+    for(let i = 0; i<heroes.length; i++){
+       if (heroes[i].type === 'Flying' && heroes[i].feePerMin > 100){
+          filterHeroes.push(heroes[i]);
+      }
+    }
+
+    // Declarative
+    heroes.filter(function(hero) {
+      return hero.type === 'Flying' && hero.feePerMin > 100;
+    });
+
+    
+    
+
+    function commentsPerWriter(comments, name){
+
+        function searchId(heroes,name){
+           return heroes.filter(function(hero){
+             return hero.name === name;
+      })
+    };
+    
+    let searchedHero = searchId(heroes, name);
+
+      return comments.filter(function(comment){
+        return comment.writerId === searchedHero[0].id;
+      })
+    };
+
+    console.log(commentsPerWriter(comments, 'X-man'));
+    </script>
+    
+</body>
