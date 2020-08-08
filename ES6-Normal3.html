@@ -59,6 +59,30 @@
     };
 
     console.log(commentsPerWriter(comments, 'X-man'));
+
+    // =======================================
+    // Example
+    let numbers = [10,20,30];
+    let lessThanFifteen = reject(numbers, function(number){
+      return number > 15;
+    });
+    lessThanFifteen // [ 10 ];
+
+    // Implement reject()
+    function reject(array, iteratorFunction) {
+      
+    }
+      // ===================================================================
+      // find = 같은이름의 객체를 찿을떄 맨위에있는놈만 찿아오고 필터는 같은이름 녀석들 모두 가져옴.
+    // Template Strings
+    function getYear(){
+      const year = new Date().getFullYear();
+      console.log(`this year is ${year}`);
+    }
+    getYear();
+  
+    
+    
     </script>
     
 </body>
