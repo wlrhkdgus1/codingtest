@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Arrow Function과 this 키워드
+    const superHeroes = {
+      members: ['Superman', 'Batman', 'Antman','Ironman'],
+      teamName: 'Super Heroes',
+      teamSummary: function(){
+        return this.members.map((member) => {
+          console.log(`${member} is a member of ${this.teamName}`)
+        })
+      }        
+    };
+
+    // S + V('this' keyword)
+    superHeroes.teamSummary();
+    // 결과값
+   /*Superman is a member of Super Heroes
+     Batman is a member of Super Heroes
+     Antman is a member of Super Heroes
+     Ironman is a member of Super Heroes*/
+
+      //1. use fat arrow
+     const fibonacci = (n) => {
+        if (n < 3) return 1;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+     }
+
+     console.log(fibonacci(9));
+     //결과값 : 34
+
+     //2. use fat arrow and 'this' keyword.
+     const profile = {
+        name: "Superman",
+        getName: (() => profile.name)
+     };
+
+     const a = profile.getName();
+     console.log(a); // "Superman"
+     
+
+     const c = {
+       name : "sisi",
+       getName : () => c.name
+     };
+     const b = c.getName();
+     console.log(b);
+     // sisi
+    </script>
+    
+</body>
